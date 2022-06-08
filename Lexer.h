@@ -11,6 +11,8 @@ private:
     std::vector<Token*> tokens;
 
     void CreateAutomata();
+    int lineNumber;
+    int inputRead = 0;
 
     // TODO: add any other private methods here (if needed)
 
@@ -19,6 +21,8 @@ public:
     ~Lexer();
 
     void Run(std::string& input);
+    std::vector<Token*> getTokenVector() {return this->tokens;}
+    string toStringLexar();
     
     // TODO: add other public methods here
 
